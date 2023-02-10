@@ -3,11 +3,11 @@
  read the code and predict what the result of evaluating it would be,
  then execute the statement(s) in the Chrome console.
  */
-let a = 1;
-let b = a++;
-let c = ++a;
+let a = 1; // a = 1
+let b = a++; // b = 1, a = 2
+let c = ++a; // a = 3, b = 1, c = 3
 // what is the value of a, b, and c?
-// a = 1, b = 1, c = 2
+
 
 let d = "hello";
 let e = false;
@@ -19,10 +19,10 @@ let perplexed; // perplexed is undefined (no value is assigned)
 perplexed + 2; // NaN
 
 let price = 2.7;
-price.toFixed(2); // 2.70
+price.toFixed(2); // "2.70"
 
 let price = "2.7";
-price.toFixed(2); // 2.70
+price.toFixed(2); // error -- toFixed can only be used with numbers
 
 isNaN(0) // false
 
@@ -132,13 +132,9 @@ console.log(`This week's payment is $${weeklyPayment.toFixed(2)} dollars`); // 7
 /* A student can be enrolled in a class only if the class is
 not full and the class schedule does not conflict with her current schedule.
  */
-let classSize = 30
-let classSizeCap = 50
+let fullClass = false
 let classConflict = false;
-let canEnroll = false;
-if (classSize < classSizeCap && classConflict === false) {
-    canEnroll = true;
-}
+let canEnroll = !fullClass && !classConflict;
 console.log(canEnroll); // true
 
 /* A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
@@ -148,7 +144,7 @@ let itemsBought = 1;
 let productOffer = false;
 let offerValid = false
 let isPremium = false
-if((itemsBought >= 2 && offerValid === true) || isPremium === true){
+if((isPremium || itemsBought >= 2) && offerValid === true){
     productOffer = true;
 }
 console.log(productOffer);
@@ -166,6 +162,6 @@ let passwordInclude = password.includes(username); // false
 let usernameLength = username.length <= 20; // true
 
 // neither the username or password can start or end with whitespace
-let whitespace = username === username.trim() && password === password.trim(); // true
+let noWhitespace = username === username.trim() && password === password.trim(); // true
 
-console.log(whitespace);
+console.log(noWhitespace);
