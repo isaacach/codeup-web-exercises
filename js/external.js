@@ -54,5 +54,5 @@ if((isPremium || itemsBought >= 2) && offerValid === true){
 } else {
     alert("Sorry, the offer cannot be applied");
 }
-
+console.log(productOffer);
 
