@@ -32,7 +32,7 @@ console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+let random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -65,10 +65,10 @@ console.log(isTwo(random));
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-const calculateTip = (tipPerc, billTotal) => 'Your tip will be ' + (tipPerc * billTotal).toLocaleString("en-US", {style:"currency", currency:"USD"});
-console.log(calculateTip(.20, 20));
-console.log(calculateTip(.25, 25.50));
-console.log(calculateTip(.15, 33.42));
+const calculateTip = (tipPerc, billTotal) => 'Your tip will be ' + ((tipPerc / 100) * billTotal).toLocaleString("en-US", {style:"currency", currency:"USD"});
+console.log(calculateTip(20, 20));
+console.log(calculateTip(25, 25.50));
+console.log(calculateTip(15, 33.42));
 
 /**
  * TODO:
@@ -76,9 +76,9 @@ console.log(calculateTip(.15, 33.42));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-let percentage = prompt("What percentage would you like to tip?");
-let total = prompt("How much is the total bill?");
-alert(calculateTip(percentage, total));
+let userPercentage = prompt("What percentage would you like to tip?");
+let userTotal = prompt("How much is the total bill?");
+alert(calculateTip(userPercentage, userTotal));
 
 /**
  * TODO:
