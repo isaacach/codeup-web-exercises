@@ -170,9 +170,8 @@ const positiveOrNegative = (number) => {
         }
     }
 let numberAsk = confirm('Would you like to enter a number?');
-let userNumber;
 if (numberAsk) {
-    userNumber = prompt('Please type a number');
+    const userNumber = prompt('Please type a number');
     if (isNaN(parseFloat(userNumber))) {
         alert('Sorry, we only accept numbers');
     } else {
@@ -183,7 +182,6 @@ if (numberAsk) {
 } else {
     alert('Okay, have a nice day');
 }
-
 
 
 // Practice /////
