@@ -13,31 +13,31 @@ let names = ["Isaac", "Matt", "Kyle", "Jacob"];
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-console.log(names.length);
+console.log(names.length); // 4
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-console.log(names[0]);
-console.log(names[1]);
-console.log(names[2]);
-console.log(names[3]);
+console.log(names[0]); // Isaac
+console.log(names[1]); // Matt
+console.log(names[2]); // Kyle
+console.log(names[3]); // Jacob
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-for (let i = 0; i < names.length; i++) {
+for (let i = 0; i < names.length; i++) { // iterates and prints each name on a separate line
     console.log(names[i]);
 }
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-names.forEach(function(name) {
+names.forEach(function(name) { // iterates and prints each name on a separate line
     console.log(name);
-    })
+    });
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -51,20 +51,17 @@ names.forEach(function(name) {
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-const firstElement = arr => {
-    console.log(arr[0]);
-    }
+const firstElement = arr => arr[0];
 
-const secondElement = arr => {
-    console.log(arr[1]);
-}
 
-const lastElement = arr => {
-    console.log(arr[arr.length - 1]);
-}
+const secondElement = arr => arr[1];
+
+
+const lastElement = arr => arr[arr.length - 1];
+
 let coolArray = [1, 2, 3, 4, 5];
 
-firstElement(coolArray);
-secondElement(coolArray);
-lastElement(coolArray);
+console.log(firstElement(coolArray)); // 1
+console.log(secondElement(coolArray)); // 2
+console.log(lastElement(coolArray)); // 5
 })();
