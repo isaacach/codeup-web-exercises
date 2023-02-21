@@ -17,7 +17,7 @@
      * TODO:
      * Create a string with <br> tags between each planet. console.log() your
      * results. Why might this be useful?
-     /*
+     */
      /*
      * BONUS:
      * Create another string that would display your planets in an unordered
@@ -28,8 +28,15 @@
      let planetsJoin = planetsArray.join('<br>');
      console.log(planetsJoin);
 
-    let planetsList = "<ul>" + "<li>" + planetsArray.join("</li><li>") + "</li>" + "</ul>";
+    let planetsList = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>";
     console.log(planetsList);
+
+    let list = document.getElementById("myList");
+    planetsArray.forEach(item => {
+        let li = document.createElement("li");
+        li.innerText = item;
+        list.appendChild(li);
+    });
 
 
 })();
