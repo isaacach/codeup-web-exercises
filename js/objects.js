@@ -54,7 +54,7 @@
     ];
     shoppers.forEach(function(item) {
         if (item.amount > 200) {
-            console.log(`${item.name} has spent $${item.amount} and gets a %12 discount. New amount => ${formatToLocaleString(item.amount * .88)}`);
+            console.log(`${item.name} has spent $${item.amount} and gets a $${(item.amount * .12).toFixed(2)} discount. New amount => ${formatToLocaleString(item.amount * .88)}`);
         } else {
             console.log(`${item.name} has spent $${item.amount} and gets no discount.`);
         }
