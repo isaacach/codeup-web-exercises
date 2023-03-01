@@ -45,6 +45,8 @@ img:hover {
 .image-wrapper {
     background-color: rgba(2,2,31,0.1);
     text-align: center;
+    display: flex;
+    flex-direction: row;
     
 }
 
