@@ -49,6 +49,10 @@ h1.hero-text {
     font-size: 60px;
 }
 
+h3.hero-text {
+    width: 400px;
+}
+
 .column.hero-text {
     min-width: 500px;
     text-space: 10px;
