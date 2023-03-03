@@ -20,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    max-width: 1000vw;
 }
 /* Combo classes to extend the container's versatility */
 .container.grow {
@@ -36,10 +37,14 @@
     */
 .row {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     display: flex;
     padding: 0 20px;
-    gap: 20px;
+    gap: 0px;
+}
+
+.row.grow {
+    flex: 1 0 0;
 }
 /* Combo classes to extend the row's versatility */
 .row.full-width {
@@ -82,7 +87,7 @@
 }
 /* Combo classes to extend the column's versatility */
 .column.shrink {
-    flex: 0 1 100px;
+    flex: 0 1 auto;
 }
 .column.text-center {
     text-align: center;
