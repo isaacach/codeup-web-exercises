@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Lesson</title>
+  <link rel="stylesheet" href="css/resets.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/forms-lesson.css">
+</head>
+<body>
+<form method="post" action="https://request-inspector.glitch.me">
+    <fieldset>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <h4><label for="comments">Please Leave Your Comments:</label></h4>
+        <textarea name="comments" id="comments" cols="30" rows="3"></textarea><br>
+    </fieldset>
+    <fieldset>
+        <legend><h4>Marvel or DC?</h4></legend>
+        <label for="marvel">Marvel:</label>
+        <input type="radio" name="marveldc" value="Marvel" id="marvel">
+        <br>
+        <label for="dc">DC:</label>
+        <input type="radio" name="marveldc" value="DC" id="dc">
+        <br>
+    </fieldset>
+    <fieldset>
+    <h4>Choose your extras:</h4>
+        <input type="checkbox" name="extras" value="Provolone" id="provolone">
+        <label for="provolone">Provolone</label><br>
+        <input type="checkbox" name="extras" value="Cheddar" id="cheddar">
+        <label for="cheddar">Cheddar</label><br>
+        <input type="checkbox" name="extras" value="American Cheese" id="american">
+        <label for="american">American Cheese</label><br>
+        <input type="checkbox" name="extras" value="Swiss" id="swiss">
+        <label for="swiss">Swiss Cheese</label><br>
+        <input type="checkbox" name="extras" value="Pepper Jack" id="pepperJack">
+        <label for="pepperJack">Pepper Jack</label><br>
+        <input type="checkbox" name="extras" value="Jalapenos" id="jalapenos">
+        <label for="jalapenos">Sliced Jalapenos</label><br>
+        <input type="checkbox" name="extras" value="Mushrooms" id="mushrooms">
+        <label for="mushrooms">Sauteed Mushrooms</label><br>
+        <input type="checkbox" name="extras" value="Onions" id="onions">
+        <label for="onions">Grilled Onions</label><br>
+        <input type="checkbox" name="extras" value="Bacon" id="bacon">
+        <label for="bacon">Extra Bacon</label><br>
+        <input type="checkbox" name="extras" value="Guacamole" id="guacamole">
+        <label for="guacamole">Guacamole</label><br>
+    </fieldset>
+    <fieldset>
+    <h4><label for="destination">Choose your destination:</label></h4>
+        <select name="destination" id="destination">
+            <option value="Hawaii">Hawaii</option>
+            <option value="Yucatan">Yucatan</option>
+            <option value="Greece">Greece</option>
+            <option value="Florida">Florida</option>
+            <option value="California">California</option>
+        </select>
+    </fieldset>
+    <fieldset>
+    <h4>Assorted inputs</h4>
+    <input type="date" name="date"><br>
+    <!-- date can take min and max attributes -->
+    <input type="color" name="pickColor"><br>
+    <input type="range" name="evaluation"><br>
+    <!-- range can take min, max, and step attributes -->
+    <input type="number" name="number"><br><br>
+    <!-- number can take min, max, and step attributes -->
+    <!-- email, tel, and url inputs are predominantly mobile-oriented -->
+    </fieldset>
+    <fieldset>
+    <input type="reset">
+    <br>
+    <input type="submit">
+    </fieldset>
+</form>
+</body>
+</html>
