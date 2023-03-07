@@ -105,6 +105,10 @@
 .column.justify-center {
     justify-content: center;
 }
+
+.column.justify-bottom {
+    justify-content: end;
+}
 .column.justify-space-between {
     justify-content: space-between;
 }

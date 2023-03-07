@@ -3,14 +3,13 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-.page-wrapper {
-    height: 100vh;
-}
-
 .container {
     flex-grow: 1;
 }
 
+.features {
+    font-style: italic;
+}
 
 .alert-info {
     display: none;
@@ -42,7 +41,11 @@ footer.row {
     height: 150px;
 }
 
-@media screen and (max-width:576px) {
+#main {
+    flex-grow: 2;
+}
+
+@media screen and (max-width:650px) {
     .container {
         gap: 10px;
     }
@@ -56,7 +59,7 @@ footer.row {
         justify-items: center;
     }
 
-    li {
+    .nav-links a {
         background-color: lightgray;
         width: 90vw;
         height: 50px;
@@ -81,7 +84,7 @@ footer.row {
         display: unset;
         background-color: lightblue;
         padding: 10px;
-        border: 1px solid dimgray;
+        border: 1px solid lightgray;
         font-size: 12px
     ;
     }
