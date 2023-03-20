@@ -35,7 +35,7 @@ $(window).on('keydown', function(e) {
 function activateCheats() {
     $('.head.container').css('height', '100px');
     $('.image-wrapper').append("<image id='konami-image' src='images/cody-parade%20(1).jpeg' alt='duck'>");
-    $('.main.container').css('background','url("/images/cherry-blossoms-japan.gif") no-repeat center center fixed');
+    $('.main.container').css('background','url("images/cherry-blossoms-japan.gif") no-repeat center center fixed');
     $('.main.container').css('-webkit-background-size', 'cover');
     $('.main.container').css('-moz-background-size', 'cover');
     $('.main.container').css('-o-background-size', 'cover');

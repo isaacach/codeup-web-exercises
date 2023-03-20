@@ -1,0 +1,43 @@
+body {
+    background-color: lightgray;
+    font-family: Roboto, sans-serif;
+}
+
+.invisible {
+    /*visibility: hidden;*/
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+h1 {
+    align-self: center;
+    text-decoration: underline;
+}
+
+dt, h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+dd {
+    margin-left: 20px;
+}
+
+li {
+    margin-left: 40px;
+}
+
+button {
+    height: 40px;
+    background-color: lightblue;
+    border-radius: 10px;
+    margin: 20px;
+    border: 1px solid dimgrey;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
