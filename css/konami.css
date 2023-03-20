@@ -1,0 +1,58 @@
+body {
+    font-family: "Andale Mono", sans-serif;
+    font-size: 50px;
+}
+
+.head.container {
+    background-color: dimgrey;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 100vh;
+}
+
+.main.container {
+    position: relative;
+
+}
+#konami-image {
+    top: 300px;
+    width: 300px;
+    position: absolute;
+    animation: image-dance 5s ease-in 2s infinite;
+    border-radius: 50%;
+}
+
+@keyframes image-dance {
+    0% {
+        transform: rotate(180deg);
+    }
+    10% {
+        scale: .5;
+    }
+    15% {
+        scale: 3;
+    }
+    30% {
+        transform: rotate(720deg);
+    }
+    40% {
+        transform: rotate(-720deg);
+    }
+    50% {
+        top: 100px;
+    }
+    60% {
+        left: 50px;
+    }
+    70% {
+        right: 50px;
+    }
+    80% {
+        bottom: 100px;
+    }
+    90% {
+        top: 300px;
+    }
+    100% {
+        scale: 1;
+    }
+}
