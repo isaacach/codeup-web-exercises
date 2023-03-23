@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <script src="js/keys.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/weather-map.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet'>
+</head>
+<body>
+<div class="page-wrapper">
+    <header class="container">
+        <div class="row justify-center align-center">
+            <div class="column shrink">
+                <h1>Weather Forecast</h1>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row main">
+            <div class="column current justify-space-between shrink">
+                <div class="row justify-center align-center">
+                    <form>
+                        <label for="location">Enter Location</label><br>
+                        <input type="text" id="location" name="location" value=""><br>
+                    </form>
+                    <button id="search">Search</button>
+                </div>
+                <div class="today-weather">
+                    <h3>Date</h3>
+                    <p>Temp</p>
+                    <p>Wind</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="column">
+                <div id='map' style='width: 100%; height: 400px;'></div>
+                <div class="column five-day">
+                    <div class="row justify-center align-center five-day grow">
+                        <div class="weather">
+                            <h3>Date</h3>
+                            <p>Temp</p>
+                            <p>Wind</p>
+                            <p></p>
+                        </div>
+                        <div class="weather">
+                            <h3>Date</h3>
+                            <div class="weather-image">
+                                <img>
+                            </div>
+                            <p>Temp</p>
+                            <p>Wind</p>
+                            <p></p>
+                        </div>
+                        <div class="weather">
+                            <h3>Date</h3>
+                            <div class="weather-image">
+                                <img>
+                            </div>
+                            <p>Temp</p>
+                            <p>Wind</p>
+                            <p></p>
+                        </div>
+                        <div class="weather">
+                            <h3>Date</h3>
+                            <div class="weather-image">
+                                <img>
+                            </div>
+                            <p>Temp</p>
+                            <p>Wind</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mapboxgl.accessToken = MAPBOX_API_TOKEN;
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/navigation-night-v1', // style URL
+            center: [-98.48537, 29.423817], // starting position [lng, lat]
+            zoom: 9,  // starting zoom
+        });
+    </script>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/weather-map.js"></script>
+<script src="js/geocode-utils.js"></script>
+</body>
+</html>

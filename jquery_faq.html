@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>JQuery FAQ Exercise</title>
@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="column">
-                <button>Click to show/hide answers</button>
+<!--                <button>Click to show/hide answers</button>-->
                 <h1>Top Ten Questions about Glacier National Park</h1>
                 <dl>
                     <dt>Where is Glacier National Park located?</dt>
@@ -60,6 +60,7 @@
                     <dt>Can I drive my RV along the Going-to-the-Sun Road?</dt>
                     <dd>Vehicles, and vehicle combinations, longer than 21 feet (including bumpers) or wider than 8 feet (including mirrors) are prohibited between Avalanche Campground and the Sun Point parking area. You may however, drive to Avalanche if traveling east, and to Sun Point, if traveling west. Vehicles over 10 feet in height may have difficulty driving west from Logan Pass due to rock overhangs. Stock trucks and trailers may access Packers Roost and Siyeh Bend.</dd>
                 </dl>
+                <button>Click to highlight</button>
                 <h3>Denali National Park</h3>
                 <ul>
                     <li>DNP is home to the highest peak in North America, Denali. Called "The High One" in language of the Athabascan tribe, this towering peak stands at 20,320 feet above sea level.</li>
@@ -84,11 +85,29 @@
             </div>
         </div>
     </div>
+    <div class="image container">
+        <div class="image row align-center justify-center">
+            <div class="column">
+                <div class="frame">
+                    <img class="bg1" src="images/cherry-blossoms-japan.gif">
+                </div>
+                <button id="left" class="swap-btn">swap</button>
+            </div>
+            <div class="column">
+                <div class="frame">
+                    <img class="bg2" src="images/cody-parade%20(1).jpeg">
+                </div>
+                <button id="middle" class="swap-btn">swap</button>
+            </div>
+            <div class="column">
+                <div class="frame">
+                    <img class="bg3" src="images/download%20(1).jpeg">
+                </div>
+                <button id="right" class="swap-btn">swap</button>
+            </div>
+        </div>
+    </div>
 </div>
-
-
-
-
 
 
 <script src="js/jquery.js"></script>

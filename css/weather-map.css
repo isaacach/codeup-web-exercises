@@ -1,0 +1,46 @@
+body {
+    background:linear-gradient(aliceblue, lavender);
+}
+
+#map {
+    border-radius: 15px;
+}
+
+input#location {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.today-weather {
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 75%;
+}
+
+.row.main {
+    height: 90vh;
+}
+
+.weather {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.row.five-day {
+    padding: 0;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+gap-10 {
+    gap: 10px;
+}
