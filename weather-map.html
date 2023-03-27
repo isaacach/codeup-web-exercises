@@ -19,59 +19,46 @@
             </div>
         </div>
     </header>
-    <div class="container">
+    <div class="map-container">
+        <div id='map' style='width: 100%; height: 100%;'></div>
+        <button class="map-button">Toggle Overlay</button>
+    </div>
+
+    <div class="container main">
         <div class="row main">
-            <div class="column current justify-space-between shrink">
-                <div class="row justify-center align-center">
-                    <form>
-                        <label for="location">Enter Location</label><br>
-                        <input type="text" id="location" name="location" value=""><br>
-                    </form>
-                    <button id="search">Search</button>
+            <div class="column current justify-space-between ">
+                <div class="row city justify-center">
+                    <h1 class="title"></h1>
                 </div>
-                <div class="today-weather">
-                    <h3>Date</h3>
-                    <p>Temp</p>
-                    <p>Wind</p>
-                    <p></p>
+                <div class="row user align-center justify-center grow">
+                    <div class="search-wrap">
+                        <div class="search">
+                            <input type="text" id="location" placeholder="search a location">
+                            <button type="submit" id="search">Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="today-weather">
+                    <img class="weather-icon" src="" alt="weather">
                 </div>
             </div>
             <div class="column">
-                <div id='map' style='width: 100%; height: 400px;'></div>
-                <div class="column five-day">
-                    <div class="row justify-center align-center five-day grow">
-                        <div class="weather">
-                            <h3>Date</h3>
-                            <p>Temp</p>
-                            <p>Wind</p>
-                            <p></p>
+                <div class="column four-day">
+                    <div class="row justify-center align-center four-day grow">
+                        <div data-dbid="1" class="weather">
+
                         </div>
-                        <div class="weather">
-                            <h3>Date</h3>
-                            <div class="weather-image">
-                                <img>
-                            </div>
-                            <p>Temp</p>
-                            <p>Wind</p>
-                            <p></p>
+                        <div data-dbid="2" class="weather">
+
                         </div>
-                        <div class="weather">
-                            <h3>Date</h3>
-                            <div class="weather-image">
-                                <img>
-                            </div>
-                            <p>Temp</p>
-                            <p>Wind</p>
-                            <p></p>
+                    </div>
+                    <div class="row justify-center align-center four-day grow">
+                        <div data-dbid="3" class="weather">
+
                         </div>
-                        <div class="weather">
-                            <h3>Date</h3>
-                            <div class="weather-image">
-                                <img>
-                            </div>
-                            <p>Temp</p>
-                            <p>Wind</p>
-                            <p></p>
+                        <div data-dbid="4" class="weather">
+
                         </div>
                     </div>
                 </div>
@@ -81,12 +68,14 @@
 
     <script>
         mapboxgl.accessToken = MAPBOX_API_TOKEN;
+
         const map = new mapboxgl.Map({
-            container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/navigation-night-v1', // style URL
-            center: [-98.48537, 29.423817], // starting position [lng, lat]
-            zoom: 9,  // starting zoom
+        container: 'map',
+        style: 'mapbox://styles/mapbox/navigation-night-v1',
+        center: [-98.48537, 29.423817],
+        zoom: 9
         });
+
     </script>
 </div>
 <script src="js/jquery.js"></script>
