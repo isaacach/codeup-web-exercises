@@ -19,10 +19,10 @@ const getWeather = async (long = -98.48537, lat = 29.423817) => {
         document.querySelector('.title').innerText = data.name
         weather += "<div class='weather-item'>";
         weather +=  "<div class='day'>"+dateObject.toDateString() + "</div>" ;
-        weather += "<div class='data'>Current Temp: " + "<span class='temp'>"+ data.main.temp +" deg</span>"+ "</div>" ;
-        weather += "<div class='data'>High: " + "<span class='temp'>"+ data.main.temp_max +" deg</span>"+ "</div>" ;
-        weather += "<div class='data'>Low: "  + "<span class='temp'>"+ data.main.temp_min +" deg</span>" + "</div>" ;
-        weather += "<div class='data'>Wind Speed: "  + "<span class='temp'>"+ data.wind.speed +" deg</span>" + "</div>" ;
+        weather += "<div class='data'>Current Temp: " + "<span class='temp'>"+ Math.round(data.main.temp) +" deg</span>"+ "</div>" ;
+        weather += "<div class='data'>High: " + "<span class='temp'>"+ Math.round(data.main.temp_max) +" deg</span>"+ "</div>" ;
+        weather += "<div class='data'>Low: "  + "<span class='temp'>"+ Math.round(data.main.temp_min) +" deg</span>" + "</div>" ;
+        weather += "<div class='data'>Wind Speed: "  + "<span class='temp'>"+ Math.round(data.wind.speed) +" mph</span>" + "</div>" ;
         weather += "<div class='data'>Humidity: "  + "<span class='temp'>"+ data.main.humidity +"%</span>" + "</div>" ;
         weather += "<div class='data'>"  + "<span class='temp'>"+ data.weather[0].description +"</span>" + " </div>";
         weather += "<div class='icon'>"  + "<img class='weather-icon' alt='weather' src=''>" + " </div>";
@@ -45,9 +45,9 @@ const getFourDayWeather = async (long = -98.48537, lat = 29.423817) => {
             let dateObject = new Date(data.list[i * 8].dt * 1000);
             weather += "<div class='weather-item'>";
             weather += "<div class='day'>" + dateObject.toDateString() + "</div>";
-            weather += "<div class='data'>Temp: " + "<span class='temp'>" + data.list[i * 8].main.temp + " deg</span>" + "</div>";
+            weather += "<div class='data'>Temp: " + "<span class='temp'>" + Math.round(data.list[i * 8].main.temp) + " deg</span>" + "</div>";
             weather += "<div class='data'>Humidity: " + "<span class='temp'>" + data.list[i * 8].main.humidity + "%</span>" + "</div>";
-            weather += "<div class='data'>Wind Speed: " + "<span class='temp'>" + data.list[i * 8].wind.speed + "mph</span>" + "</div>";
+            weather += "<div class='data'>Wind Speed: " + "<span class='temp'>" + Math.round(data.list[i * 8].wind.speed) + " mph</span>" + "</div>";
             weather += "<div class='data'>" + "<span class='temp'>" + data.list[i * 8].weather[0].description + "</span>" + " </div>";
             weather += "</div>"
             document.querySelector(`[data-dbid='${i}']`).innerHTML = weather;
