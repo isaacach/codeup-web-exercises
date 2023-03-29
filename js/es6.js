@@ -50,15 +50,12 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach(user => {
-  return emails.push(user.email);
-});
-users.forEach(user => {
-  return names.push(user.name);
-});
+users.forEach(user => emails.push(user.email));
+users.forEach(user => names.push(user.name));
+
 let developers = [];
 // TODO: replace `var` with `let` in the following declaration
-users.forEach(function(user) {
+users.forEach(user => {
   // TODO: rewrite the code below to use object destructuring assignment
   //       note that you can also use destructuring assignment in the function
   //       parameter definition
@@ -79,3 +76,5 @@ for(let developer of developers) {
 list += '</ul>';
 
 document.querySelector('.wrap').innerHTML = list;
+
+
