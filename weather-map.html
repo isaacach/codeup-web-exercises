@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map</title>
-    <script src="js/keys.js"></script>
+
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/resets.css">
@@ -67,19 +67,13 @@
     </div>
 
     <script>
-        mapboxgl.accessToken = MAPBOX_API_TOKEN;
 
-        const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/navigation-night-v1',
-        center: [-98.48537, 29.423817],
-        zoom: 9
-        });
+
 
     </script>
 </div>
 <script src="js/jquery.js"></script>
-<script src="js/weather-map.js"></script>
-<script src="js/geocode-utils.js"></script>
+<script type="module" src="js/weather-map.js"></script>
+<script type="module" src="js/geocode-utils.js"></script>
 </body>
 </html>

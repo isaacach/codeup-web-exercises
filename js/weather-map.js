@@ -1,3 +1,13 @@
+import {keys} from './keys.js'
+
+mapboxgl.accessToken = keys.mapbox;
+
+const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/navigation-night-v1',
+    center: [-98.48537, 29.423817],
+    zoom: 9
+});
 
 // listener for toggle overlay button to hide and show the overlay
 let main = document.querySelector('.container.main');
@@ -12,11 +22,11 @@ let marker = new mapboxgl.Marker({draggable: true})
 //function to get the current weather
 const getWeather = async (long = -98.48537, lat = 29.423817) => {
     try {
-        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${OPEN_WEATHER_APPID}&units=imperial`);
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${keys.openweather}&units=imperial`);
         let data = await response.json();
         let weather = '';
         let dateObject = new Date(data.dt * 1000);
-        document.querySelector('.title').innerText = data.name
+        document.querySelector('.title').innerText = data.name;
         weather += "<div class='weather-item'>";
         weather +=  "<div class='day'>"+dateObject.toDateString() + "</div>" ;
         weather += "<div class='data'>Current Temp: " + "<span class='temp'>"+ Math.round(data.main.temp) +" deg</span>"+ "</div>" ;
@@ -37,7 +47,7 @@ const getWeather = async (long = -98.48537, lat = 29.423817) => {
 // function to get the five day forecast
 const getFourDayWeather = async (long = -98.48537, lat = 29.423817) => {
     try {
-        let response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${OPEN_WEATHER_APPID}&units=imperial`);
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${keys.openweather}&units=imperial`);
         let data = await response.json();
         console.log(data)
         for (let i = 1; i < 5; i++) {
@@ -65,7 +75,7 @@ let currentPin;
 document.querySelector('#search').addEventListener('click', async(e)=> {
     e.preventDefault();
     let userLocation = document.querySelector('#location').value;
-    let coords = await geocode(userLocation, MAPBOX_API_TOKEN);
+    let coords = await geocode(userLocation, keys.mapbox);
     console.log(coords);
     let currentData = await getWeather(coords[0], coords[1]);
     let fourDayData = await getFourDayWeather(coords[0], coords[1]);
